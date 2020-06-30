@@ -19,7 +19,6 @@
 
 # Android Studio files
 
-gradle/
 .gradle
 .idea/
 .DS_Store
