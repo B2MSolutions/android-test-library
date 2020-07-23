@@ -20,7 +20,7 @@ abstract class KotlinHelper {
         fun <T> uninitialized(): T = null as T
 
         fun <T> eq(value: T): T {
-            return Mockito.eq(value) ?: uninitialized()
+            return Mockito.eq(value) ?: value ?: uninitialized()
         }
 
         fun <T> any(type: Class<T>): T {
