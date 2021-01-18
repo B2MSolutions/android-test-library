@@ -1,5 +1,6 @@
 package com.b2msolutions.test
 
+import org.mockito.ArgumentCaptor
 import org.mockito.Mockito
 
 abstract class KotlinHelper {
@@ -29,6 +30,10 @@ abstract class KotlinHelper {
 
         fun <T> anyObject(): T {
             return Mockito.any<T>() ?: uninitialized()
+        }
+
+        fun <T> capture(argumentCaptor: ArgumentCaptor<T>): T {
+            return argumentCaptor.capture() ?: uninitialized()
         }
     }
 }
